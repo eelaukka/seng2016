@@ -21,7 +21,12 @@ class FizzBuzz():
             print >> out, self.calc(i)
 
     # Seems to give correct values. Tested with 1 and 2.
-    def calc(self, i):
+    def calc(self, i,n=0):
+        for n in range(2,i):
+            if (i % n) == 0:
+                break
+            else:
+                return "is a prime"
         if ((i % 3) == 0) and ((i % 5) == 0):
             return "FizzBuzz"
         elif ((i % 3) == 0):
@@ -31,6 +36,7 @@ class FizzBuzz():
         else:
             return i
         return i
+        
 
 if __name__ == "__main__":
     app = FizzBuzz()
